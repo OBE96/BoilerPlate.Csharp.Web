@@ -27,6 +27,7 @@
 		<Folder Include="Features\Subcriptions\Queries\" />
 		<Folder Include="Features\UserManagement\Queries\" />
 		<Folder Include="Shared\Dtos\Validators\" />
+		<Folder Include="Utils\" />
 	</ItemGroup>
 
 	<ItemGroup>

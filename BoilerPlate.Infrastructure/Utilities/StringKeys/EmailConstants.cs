@@ -1,6 +1,4 @@
-﻿
-
-namespace BoilerPlate.Infrastructure.Utilities.StringKeys
+﻿namespace BoilerPlate.Infrastructure.Utilities.StringKeys
 {
     public static class EmailConstants
     {
