@@ -2,7 +2,6 @@
 using BoilerPlate.Application.Features.UserManagement.Commands;
 using BoilerPlate.Application.Features.UserManagement.Dtos;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BoilerPlate.Web.Controllers.V1
@@ -20,17 +19,17 @@ namespace BoilerPlate.Web.Controllers.V1
 
 
         [HttpPost("register")]
-        [ProducesResponseType(typeof(SignUpResponse),StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(SignUpResponse), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status422UnprocessableEntity)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
 
         public async Task<ActionResult<SignUpResponse>> UserSignUp([FromBody] UserSignUpDto Body)
         {
-            var command = new UserSignUpCommand (Body);
+            var command = new UserSignUpCommand(Body);
             var response = await _mediator.Send(command);
 
-            if(response.Data == null)
+            if (response.Data == null)
             {
                 return BadRequest(response);
             }

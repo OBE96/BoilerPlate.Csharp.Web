@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 
-
 namespace BoilerPlate.Application.Features.UserManagement.Dtos
 {
     public class OrganisationDto

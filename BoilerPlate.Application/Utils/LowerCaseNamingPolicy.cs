@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
-namespace BoilerPlate.Application.Utils
+namespace Hng.Application.Utils
 {
-    internal class LowerCaseNamingPolicy
+    public class LowerCaseNamingPolicy : JsonNamingPolicy
     {
+        public override string ConvertName(string name) => name.ToLower();
     }
 }
