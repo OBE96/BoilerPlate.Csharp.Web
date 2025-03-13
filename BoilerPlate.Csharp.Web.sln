@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoilerPlate.Web", "BoilerPlate.Csharp.Web\BoilerPlate.Web.csproj", "{0801B7D8-D122-463D-BC44-90296591D91E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoilerPlate.Application", "BoilerPlate.Application\BoilerPlate.Application.csproj", "{F413E8F9-BAA6-4713-8E89-3D7DA9423891}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DE7C5AA0-4869-4AD9-88FC-9D23E84C689B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoilerPlate.Infrastructure", "BoilerPlate.Infrastructure\BoilerPlate.Infrastructure.csproj", "{2EFBC2BD-8954-4C08-A3FC-46BA8020928B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoilerPlate.Domain", "BoilerPlate.Domain\BoilerPlate.Domain.csproj", "{67F2E668-B8CC-482A-812A-7C36DB801DA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoilerPlate.Graphql", "BoilerPlate.Graphql\BoilerPlate.Graphql.csproj", "{A134FC2D-0185-4DBE-BC84-1BA7C7EDBAF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoilerPlate.Application.Test", "BoilerPlate.Application.Test\BoilerPlate.Application.Test.csproj", "{FF8DFAB0-CD43-4B09-9126-5A190B501184}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0801B7D8-D122-463D-BC44-90296591D91E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0801B7D8-D122-463D-BC44-90296591D91E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0801B7D8-D122-463D-BC44-90296591D91E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0801B7D8-D122-463D-BC44-90296591D91E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F413E8F9-BAA6-4713-8E89-3D7DA9423891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F413E8F9-BAA6-4713-8E89-3D7DA9423891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F413E8F9-BAA6-4713-8E89-3D7DA9423891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F413E8F9-BAA6-4713-8E89-3D7DA9423891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFBC2BD-8954-4C08-A3FC-46BA8020928B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFBC2BD-8954-4C08-A3FC-46BA8020928B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFBC2BD-8954-4C08-A3FC-46BA8020928B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFBC2BD-8954-4C08-A3FC-46BA8020928B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67F2E668-B8CC-482A-812A-7C36DB801DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67F2E668-B8CC-482A-812A-7C36DB801DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67F2E668-B8CC-482A-812A-7C36DB801DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67F2E668-B8CC-482A-812A-7C36DB801DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A134FC2D-0185-4DBE-BC84-1BA7C7EDBAF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A134FC2D-0185-4DBE-BC84-1BA7C7EDBAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A134FC2D-0185-4DBE-BC84-1BA7C7EDBAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A134FC2D-0185-4DBE-BC84-1BA7C7EDBAF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF8DFAB0-CD43-4B09-9126-5A190B501184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8DFAB0-CD43-4B09-9126-5A190B501184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8DFAB0-CD43-4B09-9126-5A190B501184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8DFAB0-CD43-4B09-9126-5A190B501184}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0801B7D8-D122-463D-BC44-90296591D91E} = {DE7C5AA0-4869-4AD9-88FC-9D23E84C689B}
+		{F413E8F9-BAA6-4713-8E89-3D7DA9423891} = {DE7C5AA0-4869-4AD9-88FC-9D23E84C689B}
+		{2EFBC2BD-8954-4C08-A3FC-46BA8020928B} = {DE7C5AA0-4869-4AD9-88FC-9D23E84C689B}
+		{67F2E668-B8CC-482A-812A-7C36DB801DA7} = {DE7C5AA0-4869-4AD9-88FC-9D23E84C689B}
+		{A134FC2D-0185-4DBE-BC84-1BA7C7EDBAF5} = {DE7C5AA0-4869-4AD9-88FC-9D23E84C689B}
+		{FF8DFAB0-CD43-4B09-9126-5A190B501184} = {DE7C5AA0-4869-4AD9-88FC-9D23E84C689B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Products\Commands\" />
+    <Folder Include="Features\Products\Handlers\" />
+    <Folder Include="Features\Products\Mappers\" />
+    <Folder Include="Features\Products\Validators\" />
+    <Folder Include="Features\Products\Queries\" />
+    <Folder Include="Features\Organisations\Commands\" />
+    <Folder Include="Features\Organisations\Handlers\" />
+    <Folder Include="Features\Organisations\Mappers\" />
+    <Folder Include="Features\Organisations\Queries\" />
+    <Folder Include="Features\Profiles\Commands\" />
+    <Folder Include="Features\Profiles\Handlers\" />
+    <Folder Include="Features\Profiles\Mappers\" />
+    <Folder Include="Features\Profiles\Queries\" />
+    <Folder Include="Features\Subcriptions\Commands\" />
+    <Folder Include="Features\Subcriptions\Dtos\Requests\" />
+    <Folder Include="Features\Subcriptions\Handlers\" />
+    <Folder Include="Features\Subcriptions\Mappers\" />
+    <Folder Include="Features\Subcriptions\Queries\" />
+    <Folder Include="Features\UserManagement\Queries\" />
+    <Folder Include="Shared\Dtos\Validators\" />
+    <Folder Include="Utils\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BoilerPlate.Domain\BoilerPlate.Domain.csproj" />
+    <ProjectReference Include="..\BoilerPlate.Infrastructure\BoilerPlate.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

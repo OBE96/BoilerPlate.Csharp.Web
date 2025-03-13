@@ -1,0 +1,6 @@
+@BoilerPlate.Csharp.Web_HostAddress = http://localhost:5211
+
+GET {{BoilerPlate.Csharp.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
