@@ -11,7 +11,7 @@ namespace BoilerPlate.Infrastructure
 {
     public static class ConfigureInfrastructure
     {
-        public static IServiceCollection AddInfrastructureConfig(this IServiceCollection services , string connectionString)
+        public static IServiceCollection AddInfrastructureConfig(this IServiceCollection services, string connectionString)
         {
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped<DbContext, ApplicationDbContext>();

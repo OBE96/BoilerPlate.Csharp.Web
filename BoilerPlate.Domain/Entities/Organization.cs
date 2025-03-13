@@ -3,7 +3,7 @@
     //many-to-many relationship
     //A single Organization can have many Users (the Users property in the Organization class).
     //A single User can belong to many Organizations (the Organizations property in the User class).
-    public class Organization:EntityBase
+    public class Organization : EntityBase
     {
         public string? Name { get; set; }
 

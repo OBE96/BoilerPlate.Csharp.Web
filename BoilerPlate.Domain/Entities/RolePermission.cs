@@ -3,7 +3,7 @@
     //many-to-many relationship
     //A single Role can have many RolePermission.
     //A single RolePermission  can belong to many Roles
-    public class RolePermission: EntityBase
+    public class RolePermission : EntityBase
     {
         public string? Name { get; set; }
         public string? Description { get; set; }

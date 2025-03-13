@@ -6,7 +6,7 @@ namespace BoilerPlate.Infrastructure.Repository.Interface
 {
     public interface IRepository<T> where T : EntityBase
     {
-        Task<T> GetAsync (Guid id);
+        Task<T> GetAsync(Guid id);
 
         //for example , Expression<Func<T, bool>> predicate,if the predicate is something like x.Age > 18 , which means you want to fecth persons older than 18
         //params Expression<Func<T, object>>[] includeProperties: Example: If T is a Person entity and includeProperties is used,

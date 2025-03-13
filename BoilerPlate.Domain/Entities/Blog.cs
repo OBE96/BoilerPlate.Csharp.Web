@@ -6,7 +6,7 @@ namespace BoilerPlate.Domain.Entities
     //one-to-many relationship:
     // One User can have many Blog: This is the main relationship between the two entities.
     // A user can own multiple Blogs, but each Blog is owned by exactly one user.
-    public class Blog: EntityBase
+    public class Blog : EntityBase
     {
         [Required]
         public string? Title { get; set; }

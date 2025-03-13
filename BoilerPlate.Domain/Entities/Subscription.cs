@@ -8,7 +8,7 @@ namespace BoilerPlate.Domain.Entities
     //one-to-many relationship:
     // One User can have many subcription: This is the main relationship between the two entities.
     // A user can own multiple subscription, but each subcription is owned by exactly one user.
-    public class Subscription: EntityBase
+    public class Subscription : EntityBase
     {
         public Guid? UserId { get; set; }
 

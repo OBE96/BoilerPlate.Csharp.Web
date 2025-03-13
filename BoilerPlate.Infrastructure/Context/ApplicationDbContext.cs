@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BoilerPlate.Infrastructure.Context
 {
-    public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options): DbContext(options)  
+    public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
     {
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,7 @@ namespace BoilerPlate.Infrastructure.Context
             modelBuilder.ApplyConfiguration<Transaction>(new PaymentConfiguration());
             modelBuilder.ApplyConfiguration<Subscription>(new SubscriptionConfiguration());
             modelBuilder.ApplyConfiguration(new ApiStatusConfiguration());
-        
+
 
         }
         public DbSet<User> Users { get; set; }

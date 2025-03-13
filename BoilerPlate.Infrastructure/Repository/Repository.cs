@@ -34,7 +34,7 @@ namespace BoilerPlate.Infrastructure.Repository
             return await _context.Set<T>().CountAsync();
         }
 
-        public  async Task<int> CountAsync(Expression<Func<T, bool>> predicate)
+        public async Task<int> CountAsync(Expression<Func<T, bool>> predicate)
         {
             return await _context.Set<T>().CountAsync(predicate);
         }
@@ -131,7 +131,7 @@ namespace BoilerPlate.Infrastructure.Repository
                 }
             }
             await _context.SaveChangesAsync();
-        
+
         }
 
         public Task UpdateAsync(T entity)
