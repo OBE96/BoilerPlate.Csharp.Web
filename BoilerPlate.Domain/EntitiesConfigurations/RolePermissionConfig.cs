@@ -18,7 +18,7 @@ namespace BoilerPlate.Domain.EntitiesConfigurations
             builder.Property(x => x.Description);
             builder.Property(x => x.CreatedAt).IsRequired();
 
-             //many - to - many relationship
+            //many - to - many relationship
             //A single Role can have many RolePermission.
             //A single RolePermission  can belong to many Roles
             builder.HasMany(rp => rp.Roles)

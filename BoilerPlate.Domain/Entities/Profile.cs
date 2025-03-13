@@ -4,7 +4,7 @@
     //The Profile class has a one-to-one relationship with the User class because each profile is
     //associated with exactly one user, but one user can have one profile
 
-    public class Profile: EntityBase
+    public class Profile : EntityBase
     {
         public string? FirstName { get; set; }
         public string? LastName { get; set; }

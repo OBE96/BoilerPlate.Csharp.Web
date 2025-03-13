@@ -4,7 +4,7 @@ namespace BoilerPlate.Domain.Entities
 {
     public class ApiStatus : EntityBase
     {
-        public string?   ApiGroup { get; set; }
+        public string? ApiGroup { get; set; }
 
         public ApiStatusType Status { get; set; }
 

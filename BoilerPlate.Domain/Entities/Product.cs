@@ -3,7 +3,7 @@
     //one-to-many relationship:
     // One User can have many Products: This is the main relationship between the two entities.
     // A user can own multiple products, but each product is owned by exactly one user.
-    public class Product: EntityBase
+    public class Product : EntityBase
     {
         public string? Name { get; set; }
         public string? Description { get; set; }

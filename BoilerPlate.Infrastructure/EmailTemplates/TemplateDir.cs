@@ -1,6 +1,6 @@
 ﻿namespace BoilerPlate.Infrastructure.EmailTemplates;
 
-    public record TemplateDir
-    {
-        public string? Path { get; init; }
-    }
+public record TemplateDir
+{
+    public string? Path { get; init; }
+}
