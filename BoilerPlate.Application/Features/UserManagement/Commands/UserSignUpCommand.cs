@@ -10,7 +10,6 @@ namespace BoilerPlate.Application.Features.UserManagement.Commands
         {
             SignUpBody = signUpDto;
         }
-       
+
     }
 }
-

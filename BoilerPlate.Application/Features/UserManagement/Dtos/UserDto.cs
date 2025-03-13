@@ -10,7 +10,7 @@ namespace BoilerPlate.Application.Features.UserManagement.Dtos
     public class UserDto
     {
         [JsonPropertyName("fullname")]
-        public string?   FullName { get; set; }
+        public string? FullName { get; set; }
 
         [JsonPropertyName("id")]
         public Guid Id { get; set; }
@@ -19,7 +19,7 @@ namespace BoilerPlate.Application.Features.UserManagement.Dtos
         public string? Email { get; set; }
 
         [JsonPropertyName("profile")]
-        public ProfileDto?  Profile { get; set; }
+        public ProfileDto? Profile { get; set; }
 
         [JsonPropertyName("avatar_url")]
         public string? AvatarUrl { get; set; }

@@ -22,7 +22,7 @@ namespace BoilerPlate.Application.Features.UserManagement.Handlers
         private readonly IPasswordService _passwordService;
         private readonly ITokenService _tokenService;
         private readonly IEmailService _emailService;
-        public UserSignUpCommandHandler(IRepository<User> userRepository, IRepository<Role> roleRepository, 
+        public UserSignUpCommandHandler(IRepository<User> userRepository, IRepository<Role> roleRepository,
             IMapper mapper, ILogger<UserSignUpCommandHandler> logger, IPasswordService passwordService,
             ITokenService tokenService, IEmailService emailService)
         {
