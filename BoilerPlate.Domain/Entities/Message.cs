@@ -8,7 +8,7 @@ namespace BoilerPlate.Domain.Entities
 {
     public class Message : EntityBase
     {
-        private Message(MessageType type, string recipientContact, string recipientName, string subject, string content)
+        private Message(MessageType type, string recipientContact, string recipientName, string subject, string content, bool isHtml = false)
         {
             Id = Guid.NewGuid();
             Type = type;
@@ -16,6 +16,7 @@ namespace BoilerPlate.Domain.Entities
             RecipientContact = recipientContact;
             Subject = subject;
             Content = content;
+            IsHtml = isHtml;
         }
         [Required]
         public MessageType Type { get; set; }
@@ -43,9 +44,10 @@ namespace BoilerPlate.Domain.Entities
 
         public DateTimeOffset? LastAttemptedAt { get; set; } = null;
 
-        public static Message CreateEmail(string recipientContact, string subject, string content, string recipientName = "You")
+        public bool IsHtml { get; set; }
+        public static Message CreateEmail(string recipientContact, string subject, string content, string recipientName = "You", bool isHtml = true)
         {
-            return new Message(MessageType.Email, recipientContact, recipientName, subject, content);
+            return new Message(MessageType.Email, recipientContact, recipientName, subject, content, isHtml);
         }
 
     }

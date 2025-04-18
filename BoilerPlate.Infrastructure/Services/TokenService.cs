@@ -1,6 +1,7 @@
 ﻿using BoilerPlate.Domain.Entities;
 using BoilerPlate.Infrastructure.Services.Interfaces;
 using BoilerPlate.Infrastructure.Utilities;
+using BoilerPlate.Infrastructure.Utilities.EmailQueue;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -55,6 +56,11 @@ namespace BoilerPlate.Infrastructure.Services
 
             var loggedInUSerEmail = claim
                 .First(x => x.Type == ClaimTypes.Email).Value;
+
+            if (string.IsNullOrWhiteSpace(loggedInUSerEmail))
+            {
+                throw new InvalidOperationException("User email not found in claims");
+            }
 
             return loggedInUSerEmail;
         }

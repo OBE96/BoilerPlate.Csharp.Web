@@ -1,4 +1,5 @@
-﻿using BoilerPlate.Application.Features.UserManagement.Dtos;
+﻿using BoilerPlate.Application.Features.Organisations.Dtos;
+using BoilerPlate.Application.Features.UserManagement.Dtos;
 using BoilerPlate.Domain.Entities;
 
 namespace BoilerPlate.Application.Features.UserManagement.Mappers
@@ -21,6 +22,8 @@ namespace BoilerPlate.Application.Features.UserManagement.Mappers
                .ReverseMap();
 
             CreateMap<User, UserOrganzationDto>();
+
+            CreateMap<Organization, OrganizationDto>().ReverseMap();
         }
     }
 }

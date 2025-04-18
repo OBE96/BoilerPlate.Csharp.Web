@@ -6,6 +6,7 @@ using System.Reflection;
 using BoilerPlate.Infrastructure.EmailTemplates;
 using BoilerPlate.Infrastructure.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text.Json;
 
 
 
@@ -51,6 +52,12 @@ namespace BoilerPlate.Application
             services.AddSingleton(configurations.GetSection("EmailTemplateDirectory").Get<TemplateDir>());
             services.AddSingleton(configurations.GetSection("Jwt").Get<Jwt>());
 
+
+            services.AddOptions<FrontendUrl>()
+                .Bind(configurations.GetSection("FrontendUrl"))
+                .ValidateDataAnnotations()
+                .ValidateOnStart();
+            Console.WriteLine($"JWT PARAMS: {JsonSerializer.Serialize(configurations.GetSection("Jwt").Get<Jwt>().ExpireInMinute)}");
             return services;
         }
     }
