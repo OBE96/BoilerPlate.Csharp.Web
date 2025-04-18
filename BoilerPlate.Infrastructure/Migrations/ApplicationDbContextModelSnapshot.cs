@@ -18,7 +18,7 @@ namespace BoilerPlate.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.2")
+                .HasAnnotation("ProductVersion", "8.0.7")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.HasPostgresExtension(modelBuilder, "hstore");
@@ -31,7 +31,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("ApiGroup")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
@@ -39,7 +38,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Details")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("LastChecked")
@@ -70,7 +68,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Frequency")
@@ -80,10 +77,9 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("UpdatedAt")
+                    b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
@@ -108,7 +104,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("PublishedDate")
@@ -138,15 +133,12 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Slug")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -192,19 +184,15 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("FullName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Message")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -219,7 +207,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
@@ -228,11 +215,9 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("hstore");
 
                     b.Property<string>("Subject")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("TemplateBody")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -250,22 +235,18 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Answer")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Category")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Question")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -283,15 +264,12 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Author")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Content")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -306,28 +284,24 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Company")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("DatePosted")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Level")
                         .HasColumnType("integer");
 
                     b.Property<string>("Location")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<double>("Salary")
                         .HasColumnType("double precision");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -363,7 +337,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("IPAddress")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("LoginTime")
@@ -465,7 +438,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("Message")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -528,26 +500,21 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Industry")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid>("InviteToken")
@@ -557,22 +524,18 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid>("OwnerId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Slug")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("State")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -628,7 +591,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<string>("Category")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid?>("CategoryId")
@@ -638,15 +600,12 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid>("OrganizationId")
@@ -659,7 +618,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("Size")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Status")
@@ -690,58 +648,45 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("AvatarUrl")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Bio")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Department")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("FacebookLink")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("InstagramLink")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("JobTitle")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("LinkedinLink")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Pronoun")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("TwitterLink")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
                     b.Property<string>("Username")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -795,7 +740,6 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("IsActive")
@@ -878,15 +822,12 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("GmtOffset")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("TimezoneValue")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -1047,11 +988,9 @@ namespace BoilerPlate.Infrastructure.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -1357,8 +1296,7 @@ namespace BoilerPlate.Infrastructure.Migrations
 
                     b.Navigation("Products");
 
-                    b.Navigation("Profile")
-                        .IsRequired();
+                    b.Navigation("Profile");
 
                     b.Navigation("Subscriptions");
 

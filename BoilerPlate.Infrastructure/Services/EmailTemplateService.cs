@@ -10,9 +10,9 @@ namespace BoilerPlate.Infrastructure.Services
     {
         private readonly TemplateDir templateDir = templateDir;
         private readonly ILogger<EmailTemplateService> logger = logger;
-        public async Task<string> GetForgotPasswordEmailTemplate()
+        public async Task<string> GetOrganizationInviteTemplate()
         {
-
+            
             logger.LogInformation("Getting organisation invite email template");
             string path = templateDir.Path!;
             path = Path.Combine(path, $"{EmailConstants.inviteEmailTemplate}");
@@ -20,7 +20,7 @@ namespace BoilerPlate.Infrastructure.Services
             return template;
         }
 
-        public async Task<string> GetForgotPasswordMobileEmailTemplate()
+        public async Task<string> GetForgotPasswordEmailTemplate()
         {
 
             logger.LogInformation("Getting forgot password template");
@@ -29,8 +29,8 @@ namespace BoilerPlate.Infrastructure.Services
             string template = await File.ReadAllTextAsync(path, Encoding.UTF8);
             return template;
         }
-
-        public async Task<string> GetOrganizationInviteTemplate()
+        
+        public async Task<string> GetForgotPasswordMobileEmailTemplate()
         {
             logger.LogInformation("Getting forgot password template");
             string path = templateDir.Path!;

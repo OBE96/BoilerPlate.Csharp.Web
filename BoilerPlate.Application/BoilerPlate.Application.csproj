@@ -25,13 +25,17 @@
 		<Folder Include="Features\Subcriptions\Handlers\" />
 		<Folder Include="Features\Subcriptions\Mappers\" />
 		<Folder Include="Features\Subcriptions\Queries\" />
-		<Folder Include="Features\UserManagement\Queries\" />
+		<Folder Include="Features\SuperAdmin\Commands\" />
 		<Folder Include="Shared\Dtos\Validators\" />
+		<Folder Include="Utils\" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="AutoMapper" Version="14.0.0" />
+		<PackageReference Include="CSharpFunctionalExtensions" Version="2.42.5" />
+		<PackageReference Include="FluentValidation" Version="11.9.2" />
 		<PackageReference Include="MediatR" Version="12.4.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.7" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.12" />
 	</ItemGroup>
 

@@ -27,7 +27,20 @@ namespace BoilerPlate.Infrastructure.Services
             emailMessage.To.Add(new MailboxAddress($"{message.RecipientName}", $"{message.RecipientContact}"));
             emailMessage.Subject = message.Subject;
 
-            emailMessage.Body = new BodyBuilder() { TextBody = message.Content }.ToMessageBody();
+            var bodyBuilder = new BodyBuilder();
+            // Check if the message content is HTML
+            if (message.IsHtml) // assuming the Message class now has the IsHtml property
+            {
+                bodyBuilder.HtmlBody = message.Content; // set HTML content
+            }
+            else
+            {
+                bodyBuilder.TextBody = message.Content; // set plain text content
+            }
+
+            emailMessage.Body = bodyBuilder.ToMessageBody();
+
+            //emailMessage.Body = new BodyBuilder() { TextBody = message.Content }.ToMessageBody();
 
             using var client = new SmtpClient();
 
